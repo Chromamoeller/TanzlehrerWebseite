@@ -3,10 +3,6 @@ export default {
   name: "ContentBannerImgRight",
   props: {
     text: String,
-    img: {
-      type: String,
-      required: true,
-    },
   },
 };
 </script>
@@ -16,7 +12,7 @@ export default {
       {{ text }}
     </div>
     <div class="ContentBannerImg">
-      <img :src="'img'" alt="Tanzpaar" />
+      <img src="https://picsum.photos/600/300" alt="Zufallsbild" />
     </div>
   </div>
 </template>
@@ -24,20 +20,34 @@ export default {
 .ContentBannerContainer {
   width: 100%;
   display: flex;
-  background-color: aqua;
-  height: 150px;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 212, 255, 0.3) 100%
+  );
+  height: 300px;
   border-radius: 0 0 20px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 10px;
 }
 img {
   width: 50%;
   object-fit: cover;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 20px 0px;
 }
 
 .ContentBannerImg {
   width: 40%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ContentBannerImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .ContentBannerText {
   width: 60%;

@@ -1,17 +1,23 @@
 <script>
+import ImgForBanner from "./ImgForBanner.vue";
+
 export default {
   name: "Bilderbanner",
+  components: {
+    ImgForBanner,
+  },
 };
 </script>
 <template>
   <div class="banner">
-    <!-- Hier sollen Bilder vom Tanzraum und Paaren und so weiter rein. -->
+    <ImgForBanner />
   </div>
 </template>
 <style scoped>
 .banner {
   width: 100%;
-  height: 200px;
+  height: 300px;
   background-color: black;
+  margin-bottom: 20px;
 }
 </style>

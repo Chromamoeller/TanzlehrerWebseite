@@ -12,10 +12,7 @@ export default {
 };
 </script>
 <template>
-  <ContentBannerImgLeft text="Hier steht der Text" img="Tanzpaar.png" />
-  <ContentBannerImgRight
-    text="Hier steht der Text"
-    img="../../public/Tanzpaar.png"
-  />
+  <ContentBannerImgLeft text="Hier steht der Text" />
+  <ContentBannerImgRight text="Hier steht der Text" />
 </template>
 <style scoped></style>
