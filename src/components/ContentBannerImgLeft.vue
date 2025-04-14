@@ -1,40 +1,34 @@
-<script>
+<script setup>
 import Tanzpaar from "../assets/Tanzpaar.png";
-export default {
-  data() {
-    return {
-      Tanzpaar, // 🔁 Bild in data verfügbar machen
-    };
-  },
-  name: "ContentBannerImgLeft",
-  props: {
-    text: String,
-  },
-};
+
+// Props definieren
+defineProps({
+  text: String,
+});
 </script>
+
 <template>
   <div class="ContentBannerContainer">
     <div class="ContentBannerImg">
       <img src="https://picsum.photos/600/300" alt="Zufallsbild" />
     </div>
     <div class="ContentBannerText">
-      <p>
-        {{ text }}
-      </p>
+      <p>{{ text }}</p>
     </div>
   </div>
 </template>
+
 <style scoped>
 .ContentBannerContainer {
-  width: 100%;
+  width: 95%;
   display: flex;
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 1) 0%,
-    rgba(0, 212, 255, 0.3) 100%
+    rgba(0, 212, 255, 0.1) 100%
   );
-  height: 300px;
-  border-radius: 0 0 20px 20px;
+  height: 40vh;
+  border-radius: 0 20px 20px 0;
   margin-bottom: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }

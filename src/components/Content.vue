@@ -1,18 +1,18 @@
-<script>
+<script setup>
 import Tanzpaar from "../assets/Tanzpaar.png";
 import ContentBannerImgLeft from "./ContentBannerImgLeft.vue";
 import ContentBannerImgRight from "./ContentBannerImgRight.vue";
+import { useTexteStore } from "../stores/texte.ts";
 
-export default {
-  name: "Content",
-  components: {
-    ContentBannerImgLeft,
-    ContentBannerImgRight,
-  },
-};
+const texteStore = useTexteStore();
 </script>
+
 <template>
-  <ContentBannerImgLeft text="Hier steht der Text" />
-  <ContentBannerImgRight text="Hier steht der Text" />
+  <ContentBannerImgLeft :text="texteStore.text" />
+
+  <ContentBannerImgRight :text="texteStore.text2" />
+
+  <ContentBannerImgLeft :text="texteStore.text" />
+
+  <ContentBannerImgRight :text="texteStore.text2" />
 </template>
-<style scoped></style>

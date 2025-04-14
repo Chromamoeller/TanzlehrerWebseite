@@ -1,11 +1,11 @@
 <script setup>
-import Header from "./components/Header.vue";
+import CustomHeader from "./components/CustomHeader.vue";
 import Bilderbanner from "./components/Bilderbanner.vue";
 import Content from "./components/Content.vue";
 </script>
 
 <template>
-  <Header />
+  <CustomHeader />
   <Bilderbanner />
   <Content />
 </template>

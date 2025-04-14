@@ -1,22 +1,24 @@
-<script>
-export default {
-  name: "ContentBannerImgRight",
-};
+<script setup>
+const imgCount = 10;
+import { useTexteStore } from "../stores/texte.ts";
+
+const texteStore = useTexteStore();
 </script>
+
 <template>
   <div class="banner-wrapper">
     <div class="banner-track">
       <img
-        v-for="n in 10"
+        v-for="n in imgCount"
         :key="n"
-        :src="`https://picsum.photos/300/300?random=${n}`"
+        :src="`{{texteStore.pictureLink}}${n}`"
         alt="Bild"
       />
       <!-- Dupliziere die Bilder für Endlos-Loop -->
       <img
-        v-for="n in 10"
+        v-for="n in imgCount"
         :key="'dup' + n"
-        :src="`https://picsum.photos/300/300?random=${n}`"
+        :src="`{{texteStore.pictureLink}}${n}`"
         alt="Bild"
       />
     </div>

@@ -1,14 +1,15 @@
-<script>
-export default {
-  name: "Header",
-};
+<script setup>
+import { useTexteStore } from "../stores/texte.ts";
+
+const texteStore = useTexteStore();
 </script>
+
 <template>
   <header>
     <div class="logo-header">
       <div class="profilbild">
         <img src="../assets/Löwe.png" />
-        <p>Christian Möller</p>
+        <p>{{ texteStore.myName }}</p>
       </div>
     </div>
     <div class="nav-header">
@@ -25,15 +26,15 @@ export default {
         <a href="#" class="link-wrapper">
           <div class="card">Bilder</div>
         </a>
-
-        <!-- <a href="#">Home</a>
-        <a href="#">Über Mich</a>
-        <a href="#">Kurse</a>
-        <a href="#">Bilder</a> -->
       </nav>
     </div>
   </header>
 </template>
+
+<style scoped>
+/* Deine CSS-Regeln bleiben genau wie sie sind */
+</style>
+
 <style scoped>
 header {
   width: 100%;
