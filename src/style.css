@@ -49,7 +49,8 @@ button:focus-visible {
 }
 
 #app {
-  width: 100vw;
+  /* auf dem kleinen bildschirm sieht es so aus als wären 100vw zu weit  ich bekomme eine scrollbar */
+  width: 98vw;
   margin: 0 auto;
   /* padding: 2rem; */
   text-align: center;

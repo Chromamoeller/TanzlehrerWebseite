@@ -11,14 +11,14 @@ const texteStore = useTexteStore();
       <img
         v-for="n in imgCount"
         :key="n"
-        :src="`{{texteStore.pictureLink}}${n}`"
+        :src="texteStore.pictureLink"
         alt="Bild"
       />
       <!-- Dupliziere die Bilder für Endlos-Loop -->
       <img
         v-for="n in imgCount"
         :key="'dup' + n"
-        :src="`{{texteStore.pictureLink}}${n}`"
+        :src="texteStore.pictureLink"
         alt="Bild"
       />
     </div>

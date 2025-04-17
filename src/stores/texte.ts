@@ -5,6 +5,6 @@ export const useTexteStore = defineStore("texte", {
     text: "Hello Pinia ich bin nur ein Text",
     text2: "Lorem Ipsum Dolor What ever",
     myName: "Christian Möller",
-    pictureLink: "https://picsum.photos/300/300?random=",
+    pictureLink: "https://picsum.photos/600/300",
   }),
 });
